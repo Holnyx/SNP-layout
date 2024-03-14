@@ -431,6 +431,36 @@
   cursor: pointer;
 }
 
+.journey-box .menu__button:active {
+  color: #efa501;
+}
+
+.journey-box .menu__button::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  left: 50%;
+  width: 0%;
+  bottom: -6px;
+  background-color: #1b1f2b;
+  opacity: 0;
+  transition: .2s ease;
+  pointer-events: none;
+}
+
+.journey-box .menu__button:hover::before {
+  opacity: 1;
+  width: 100%;
+  margin-left: -50%;
+}
+
+.journey-box .menu__button:active::before {
+  opacity: 1;
+  width: 100%;
+  margin-left: -50%;
+  background-color: #efa501;
+}
+
 .journey-box .travel-boxes {
   display: flex;
   flex-wrap: wrap;
@@ -890,36 +920,6 @@ code {
     opacity: 1;
     width: 100%;
     margin-left: -50%;
-  }
-
-  .journey-box .menu__button:active {
-    color: #efa501;
-  }
-
-  .journey-box .menu__button::before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    left: 50%;
-    width: 0%;
-    bottom: -6px;
-    background-color: #1b1f2b;
-    opacity: 0;
-    transition: .2s ease;
-    pointer-events: none;
-  }
-
-  .journey-box .menu__button:hover::before {
-    opacity: 1;
-    width: 100%;
-    margin-left: -50%;
-  }
-
-  .journey-box .menu__button:active::before {
-    opacity: 1;
-    width: 100%;
-    margin-left: -50%;
-    background-color: #efa501;
   }
 
   .journey-box .travel-card--hover:hover {

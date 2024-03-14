@@ -1,6 +1,6 @@
 export const buttonInfo =
     ` <a href="javascript:void(0);" class='button-info'>Подробнее
-<img src="../img/arrow-btn.svg" alt="arrow" />
+<img src="img/arrow-btn.svg" alt="arrow" />
 </a>`
 
 export const sizeButton = () => {

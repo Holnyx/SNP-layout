@@ -60,35 +60,33 @@
             color: #1B1F2B
             transition: .3s ease
             cursor: pointer
+            &:active
+                color: #EFA501
+            &::before
+                position: absolute
+                content: ''
+                height: 2px
+                left: 50%
+                width: 0%
+                bottom: -6px
+                background-color: #1B1F2B
+                opacity: 0
+                transition: .2s ease
+                pointer-events: none
+            &:hover::before
+                opacity: 1
+                width: 100%
+                margin-left: -50%
+            &:active::before
+                opacity: 1
+                width: 100%
+                margin-left: -50%
+                background-color: #EFA501
             @media (max-width: 768px)
                 font-weight: 700
                 font-size: 16px
                 line-height: 142%
-            @media (min-width: 769px)
-                &:active
-                    color: #EFA501
-                &::before
-                    position: absolute
-                    content: ''
-                    height: 2px
-                    left: 50%
-                    width: 0%
-                    bottom: -6px
-                    background-color: #1B1F2B
-                    opacity: 0
-                    transition: .2s ease
-                    pointer-events: none
-                &:hover::before
-                    opacity: 1
-                    width: 100%
-                    margin-left: -50%
-                &:active::before
-                    opacity: 1
-                    width: 100%
-                    margin-left: -50%
-                    background-color: #EFA501
-            
-                
+            // @media (min-width: 769px)
 
     .travel-boxes
         display: flex
