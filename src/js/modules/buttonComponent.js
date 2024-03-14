@@ -6,6 +6,6 @@ export const buttonInfo =
 export const sizeButton = () => {
     const button = document.querySelectorAll('.button-info')
     button.forEach(button => {
-        button.classList.toggle('button-low-viewport', window.innerWidth <= 768)
+        button.classList.toggle('button-low-viewport', window.innerWidth <= 1023)
     })
 }

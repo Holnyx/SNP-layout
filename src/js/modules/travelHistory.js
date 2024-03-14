@@ -4,7 +4,7 @@ import { buttonInfo } from './buttonComponent.js'
 
 const containerTravelHistory = travelHistory.map(el =>
     `
-    <div class='travel-history' id='travel-history' style="background-image:${el.background}">
+    <div class='travel-history' id='travel-history'>
         <div class='card-info'>
             <h3 class='card-info__title'>${el.title}</h3>
             <span class='card-info__subtitle'> ${el.info.text}
@@ -21,6 +21,7 @@ const containerTravelHistory = travelHistory.map(el =>
         `<a class='a a--hover a--active' href="javascript:void(0);">${el}</a>`)
         .join('')}</div>
     </div>
+    <img class='background-img' src=${el.background}>
 </div>
   `
 )

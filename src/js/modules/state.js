@@ -2,32 +2,32 @@ export const items = [
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('@img/card-tour-photo-1.png')"
+        background: "url('../img/card-tour-photo-1.png')"
     },
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('@img/card-tour-photo-2.png')"
+        background: "url('../img/card-tour-photo-2.png')"
     },
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('@img/card-tour-photo-3.png')"
+        background: "url('../img/card-tour-photo-3.png')"
     },
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('@img/card-tour-photo-4.png')"
+        background: "url('../img/card-tour-photo-4.png')"
     },
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('@img/card-tour-photo-5.png')"
+        background: "url('../img/card-tour-photo-5.png')"
     },
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('@img/card-tour-photo-6.png')"
+        background: "url('../img/card-tour-photo-6.png')"
     }
 ]
 
@@ -69,7 +69,7 @@ export const travelHistory = [
                 'красивый город',
             ],
         },
-        background: "url('../img/story-photo-1.png')",
+        background: "../img/story-photo-1.png",
         social: [
             'instagram',
             'facebook',
@@ -81,7 +81,7 @@ export const travelHistory = [
         info: {
             text: 'Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.'
         },
-        background: "url('../img/story-photo-2.png')",
+        background: "../img/story-photo-2.png",
         social: [
             'instagram',
             'ВКонтакте'
@@ -92,7 +92,7 @@ export const travelHistory = [
         info: {
             text: 'Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.'
         },
-        background: "url('../img/story-photo-3.png')",
+        background: "../img/story-photo-3.png",
         social: [
             'instagram',
             'facebook',
