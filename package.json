@@ -2,10 +2,13 @@
   "name": "snp-layout",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://Holnyx.github.io/SNP-layout",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +26,7 @@
     "gulp-csso": "^4.0.1",
     "gulp-file-include": "^2.3.0",
     "gulp-fonter": "^0.3.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-image": "^6.3.1",

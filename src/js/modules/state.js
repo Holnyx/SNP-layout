@@ -2,32 +2,32 @@ export const items = [
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('../img/card-tour-photo-1.png')"
+        background: "url('@img/card-tour-photo-1.png')"
     },
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('../img/card-tour-photo-2.png')"
+        background: "url('@img/card-tour-photo-2.png')"
     },
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('../img/card-tour-photo-3.png')"
+        background: "url('@img/card-tour-photo-3.png')"
     },
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('../img/card-tour-photo-4.png')"
+        background: "url('@img/card-tour-photo-4.png')"
     },
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('../img/card-tour-photo-5.png')"
+        background: "url('@img/card-tour-photo-5.png')"
     },
     {
         title: 'Путешествие в горы',
         value: 'от 80 000 руб',
-        background: "url('../img/card-tour-photo-6.png')"
+        background: "url('@img/card-tour-photo-6.png')"
     }
 ]
 

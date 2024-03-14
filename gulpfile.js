@@ -8,6 +8,7 @@ import { server } from './gulp/tasks/server.js'
 import { scss } from './gulp/tasks/sass.js'
 import { js } from './gulp/tasks/js.js'
 import { images } from './gulp/tasks/images.js'
+import ghPages from 'gulp-gh-pages'
 
 global.app = {
     gulp: gulp,
@@ -26,6 +27,11 @@ function watcher() {
 }
 
 const mainTasks = gulp.parallel(copy, html, scss, js, images)
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server),)
+const deploy = () => {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
+}
 
 gulp.task('default', dev)
+gulp.task('deploy', deploy)
