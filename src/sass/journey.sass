@@ -1,0 +1,180 @@
+.journey-box
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .menu
+        margin-bottom: 80px
+        @media ( max-width: 425px )
+            margin-bottom: 50px
+        &__title
+            font-weight: 700
+            font-size: 59px
+            line-height: 124%
+            margin: 0 0 35px 0
+            @media ( max-width: 1024px )
+                font-size: 59px
+            @media ( max-width: 768px )
+                margin: 0 0 30px 0
+                font-weight: 700
+                font-size: 40px
+                line-height: 112%
+                letter-spacing: 0.02em
+            @media ( max-width: 425px )
+                margin: 0 0 30px 0
+                font-weight: 700
+                font-size: 34px
+                line-height: 112%
+                letter-spacing: 0.02em
+        &__items
+            padding: 0
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            gap: 30px
+            font-weight: 700
+            font-size: 23px
+            line-height: 122%
+            @media ( max-width: 1024px )
+                font-size: 23px
+            @media ( max-width: 768px )
+                margin: 0
+                font-weight: 700
+                font-size: 18px
+                line-height: 142%
+                gap: 10px
+            @media ( max-width: 425px )
+                margin: 0
+                width: 282px
+                font-weight: 700
+                font-size: 16px
+                line-height: 142%
+                gap: 10px
+        &__button
+            font-weight: 700
+            font-size: 23px
+            line-height: 122%
+            background-color: transparent
+            border: none
+            position: relative
+            color: #1B1F2B
+            transition: .3s ease
+            cursor: pointer
+            @media (max-width: 768px)
+                font-weight: 700
+                font-size: 16px
+                line-height: 142%
+            @media (min-width: 769px)
+                &:active
+                    color: #EFA501
+                &::before
+                    position: absolute
+                    content: ''
+                    height: 2px
+                    left: 50%
+                    width: 0%
+                    bottom: -6px
+                    background-color: #1B1F2B
+                    opacity: 0
+                    transition: .2s ease
+                    pointer-events: none
+                &:hover::before
+                    opacity: 1
+                    width: 100%
+                    margin-left: -50%
+                &:active::before
+                    opacity: 1
+                    width: 100%
+                    margin-left: -50%
+                    background-color: #EFA501
+            &:focus:first-child
+                
+
+    .travel-boxes
+        display: flex
+        flex-wrap: wrap
+        gap: 30px
+        justify-content: center
+        @media ( max-width: 1280px )
+            gap: 18px
+    .travel-card
+        max-width: 370px
+        width: 100%
+        height: 531px
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        border-radius: 50px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        padding: 50px 50px 42px 50px
+        color: white
+        position: relative
+        overflow: hidden
+        box-sizing: border-box
+        transition: .3s ease
+        background-size: 100%
+        @media ( max-width: 1280px )
+            max-width: 450px
+        @media ( max-width: 1023px )
+            max-width: 318px
+            height: 318px
+            border-radius: 20px
+            padding: 25px
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%)
+            z-index: 1
+        &--hover
+            @media (min-width: 769px)
+                &:hover
+                    background-size: 120%
+                    .button-info
+                        background-color: #286562
+                        &:active
+                            background-color: #EFA501
+
+        .button-info
+            border-radius: 50px
+            padding: 8px 20px
+            transform: translateX(-20px)
+        & > *
+            position: relative
+            z-index: 2
+        &__content
+            display: flex
+            justify-content: start
+            align-items: baseline
+            flex-direction: column
+        &__title
+            font-weight: 500
+            font-size: 35px
+            line-height: 122%
+            margin: 0
+            width: min-content
+            text-align: start
+            margin-bottom: 16px
+            @media ( max-width: 1023px )
+                width: max-content
+            @media ( max-width: 1023px )
+                font-weight: 700
+                font-size: 23px
+                line-height: 120%
+                letter-spacing: 0.04em
+                margin-bottom: 14px
+        &__subtitle
+            font-weight: 400
+            font-size: 17px
+            line-height: 142%
+            @media ( max-width: 768px )
+                font-weight: 400
+                font-size: 16px
+                line-height: 142%
+                letter-spacing: -0.01em

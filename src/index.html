@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('parts/head.html', {
+"title": "YourTour"
+})
+
+<body>
+    <div>
+        @@include('./html/_header.html', {})
+        <div class="gap">
+            @@include('./html/_main.html', {})
+            <div class=" gap">
+                @@include('./html/_journey.html', {})
+                @@include('./html/_createTour.html', {})
+                @@include('./html/_reviewTour.html', {})
+                @@include('./html/_photoTour.html', {})
+            </div>
+            @@include('./html/_travelHistory.html', {})
+        </div>
+    </div>
+    @@include('./html/_footer.html', {})
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

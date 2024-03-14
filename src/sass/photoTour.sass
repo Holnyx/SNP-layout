@@ -1,0 +1,39 @@
+.photo
+    h2
+        max-width: max-content
+    .images-travel
+        padding: 0 30px
+        flex-wrap: wrap
+        display: flex
+        gap: 30px
+        @media ( max-width: 1024px )
+            padding: 0 20px
+        @media ( max-width: 425px )
+            gap: 18px
+        &__box
+            display: flex
+            gap: 30px
+            width: 100%
+            margin: 0
+            @media ( max-width: 1024px )
+                gap: 20px
+            @media ( max-width: 768px )
+                gap: 10px
+            &:nth-child(odd)
+                @media (max-width: 425px)
+                    width: 100%
+                    justify-content: space-between
+                    gap: 18px
+            picture
+                height: 300px
+                @media (max-width: 425px)
+                    height: 110px
+
+        img
+            border-radius: 50px
+            height: 300px
+            object-fit: cover
+            width: 100%
+            @media (max-width: 425px)
+                height: 110px
+                border-radius: 20px

@@ -1,0 +1,166 @@
+.travel-history-section
+    .info__title
+        max-width: max-content
+.travel-history-box
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    gap: 50px
+    @media (max-width: 425px)
+        gap: 20px
+    .travel-history
+        position: relative
+        border-radius: 50px
+        display: flex
+        flex-direction: column
+        padding: 60px 60px 52px 60px
+        box-sizing: border-box
+        width: 100%
+        max-width: 1170px
+        height: 567px
+        background-repeat: no-repeat
+        background-position: center top
+        background-size: cover
+        overflow: hidden
+        justify-content: space-between
+        transition: .3s ease
+        .button-info
+            border-radius: 50px
+            padding: 8px 20px
+            transform: translateX(-20px)
+        @media (min-width: 769px)
+            background-size: 100%
+            &:hover
+                background-size: 120%
+            .button-info
+                background-color: #286562
+                &:active
+                    background-color: #EFA501
+        @media (max-width: 425px)
+            height: 455px
+            padding: 30px
+            border-radius: 20px
+        & > *
+            position: relative
+            z-index: 2
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%)
+        .card-info
+            color: #fff
+            text-align: start
+            width: 100%
+            max-width: 554px
+            &__title
+                font-weight: 500
+                font-size: 35px
+                line-height: 122%
+                margin: 0 0 37px 0
+                @media (max-width: 425px)
+                    width: min-content
+                    font-weight: 700
+                    font-size: 23px
+                    line-height: 120%
+                    letter-spacing: 0.04em
+                    margin: 0 0 20px 0
+            &__subtitle
+                font-weight: 400
+                font-size: 20px
+                line-height: 142%
+                margin: 0
+                @media (max-width: 768px)
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 144%
+                .items
+                    margin: 26px 0 0 0
+                    padding: 0 0 0 30px
+                    @media (max-width: 768px)
+                        margin: 24px 0 0 0
+                        padding: 0 0 0 24px
+                    li
+                        list-style-type: disc
+        .social-container
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .social
+                gap: 35px
+                display: flex
+                @media (max-width: 720px)
+                    display: none
+                .a
+                    font-weight: 400
+                    font-size: 20px
+                    line-height: 142%
+                    color: #fff
+                    @media (min-width: 769px)
+                        &--hover
+                            &:hover
+                                text-decoration: underline
+                                text-decoration-skip-ink: none
+                                text-decoration-thickness: 1px
+                        &--active
+                            &:active
+                                color: #EFA501
+
+.lets-go
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 30px
+    margin: 135px auto
+    @media (max-width: 768px)
+        flex-wrap: wrap
+        margin: 75px auto
+        gap: 28px
+    &__img
+        border-radius: 50px
+        width: 370px
+        height: 370px
+        @media (max-width: 768px)
+            width: 130px
+            height: 133px
+            border-radius: 20px
+    &__text-box
+        text-align: start
+        max-width: 371px
+        width: 100%
+        @media (max-width: 768px)
+            width: 292px
+            text-align: center
+        .text-box
+            &__title
+                font-weight: 500
+                font-size: 35px
+                line-height: 122%
+                margin: 0 0 20px 0
+            @media (max-width: 768px)
+                font-weight: 700
+                font-size: 23px
+                line-height: 120%
+                letter-spacing: 0.04em
+            &__subtitle
+                font-weight: 400
+                font-size: 20px
+                line-height: 142%
+                color: #A6A6A6
+            @media (max-width: 768px)
+                font-weight: 400
+                font-size: 16px
+                line-height: 142%
+.subtitle
+    &__email
+        color: #000
+        @media (min-width: 769px)
+            &:hover
+                text-decoration: underline
+                text-decoration-skip-ink: none
+                text-decoration-thickness: 1px
+            &:active
+                color: #286562

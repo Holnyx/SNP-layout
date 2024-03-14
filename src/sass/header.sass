@@ -1,0 +1,70 @@
+.show
+    position: relative
+    backdrop-filter: blur(54px)
+    position: fixed !important
+    &::before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        background-color: rgba(243, 239, 232, 0.6)
+    .header
+        .list__item
+            color: #1B1F2B
+            &::before
+                background-color: #1B1F2B
+        &__logo
+            filter: none
+.header
+    height: 88px
+    z-index: 999
+    left: 0
+    right: 0
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: absolute
+    background: none
+    color: white
+    &__logo
+        padding-top: 8px
+        height: 30.3px
+        filter: invert(1) grayscale(1000%) contrast(100)
+        @media (max-width: 425px)
+            height: 22px
+    &__list
+        padding: 0
+        list-style-type: none
+        display: flex
+        gap: 50px
+        @media (max-width: 1024px)
+            gap: 30px
+        li
+            @media (max-width: 1023px)
+                display: none
+.list__item
+    position: relative
+    color: white
+    font-weight: 400
+    font-size: 20px
+    line-height: 142%
+    @media (max-width: 768px)
+        font-size: 16px
+    &--hover
+        &::before
+            position: absolute
+            content: ''
+            height: 1px
+            width: 0%
+            bottom: -3px
+            background-color: white
+            opacity: 0
+            transition: .3s ease
+            pointer-events: none
+            left: 50%
+        @media (min-width: 769px)
+            &:hover::before
+                opacity: 1
+                width: 100%
+                margin-left: -50%

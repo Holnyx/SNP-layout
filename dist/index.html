@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Краткое описание вашей страницы">
+    <meta name="keywords" content="ключевые, слова, вашей, страницы">
+    <title>YourTour</title>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css?_v=20240314130749">
+    <link rel="preload" href="css/style.min.css" as="font">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&_v=20240314130749"
+        rel="stylesheet">
+    <link rel="icon" href="img/favico.svg" type="image/svg" >
+    <link rel="icon" href="img/favico.png" type="image/png" >
+</head>
+
+<body>
+    <div>
+        <header class="header" id="header">
+    <div class="header wrapper wrapper-laptop">
+        <a href="#link-start"> <img src='img/YourTour.svg' alt="YourTour" class='header__logo' /></a>
+        <nav>
+            <ul class='header__list'>
+                <li><a class="list__item list__item--hover" href="#link-tour">Туры</a></li>
+                <li><a class="list__item list__item--hover" href="#link-create-tour">Создать тур</a></li>
+                <li><a class="list__item list__item--hover" href="#link-review">Отзывы</a></li>
+                <li><a class="list__item list__item--hover" href="#link-history">Истории</a></li>
+            </ul>
+        </nav>
+        <span>
+            <a class='list__item' href="tel:7 999 999 99 99"> +7 999 999 99 99</a>
+        </span>
+    </div>
+</header>
+        <div class="gap">
+            <main class='main' id="link-start">
+    <h1 class='main__title'>Идеальные путешествия существуют</h1>
+    <span class='main__sub-title'>Идейные соображения высшего порядка, а также рамки и место обучения
+        кадров</span>
+    <a class='button-find button-find--hover button-find--active' href="javascript:void(0);">Найти тур</a>
+</main>
+            <div class=" gap">
+                <section class='journey-box'>
+    <div class='menu'>
+        <h2 class='menu__title' id="link-tour">Выбери свой тур</h2>
+        <ul class='menu__items'>
+            <li><button class="menu__button" id="popular">Популярные</button></li>
+            <li><button class="menu__button" id="autor">Авторские</button></li>
+            <li><button class="menu__button" id="hikes">Походы</button></li>
+            <li><button class="menu__button" id="rafting">Сплавы</button></li>
+            <li><button class="menu__button" id="cycling">Велопрогулки</button></li>
+        </ul>
+    </div>
+    <div class="travel-boxes wrapper" id='journey'>
+<!--------- file journey.js ---------------->
+    <!-- const journey = items.map(el =>
+            `<div class='travel-card travel-card--hover' 
+            id='journey' style="background-image:${el.background}">
+                <div class='travel-card__content'>
+                    <h3 class='travel-card__title'>${el.title}</h3>
+                    <span class='travel-card__subtitle'>${el.value}</span>
+                </div>
+        ––––––––––––––––––––––––––––––––––––––
+        --------- reusable component ---------
+                    ${buttonInfo}
+                    -------------
+                export const buttonInfo =
+                `<a href="javascript:void(0);" class='button-info'>
+                    Подробнее
+                    <img src="../img/arrow-btn.svg" alt="arrow" />
+                </a>`
+        ––––––––––––––––––––––––––––––––––––––
+    </div>`)-->
+<!------------------------------------------------->
+    </div>
+</section>
+                <section class="create-tour">
+    <div class="info">
+        <h2 class="info__title" id="link-create-tour">Собери свой тур</h2>
+        <span class="info__sub-title">Идейные соображения высшего порядка, а также рамки и место
+            обучения кадров</span>
+    </div>
+    <div class="wrapper">
+        <form class="form" id="form">
+            <fieldset class="form__item-box">
+                <div class="input-box">
+                    <label for="userName">Имя</label>
+                    <input name="userName" placeholder="Введите Ваше имя" required class="input-style" type="text" id="userName">
+                </div>
+                <div class="input-box">
+                    <label for="direction">Направление</label>
+                    <select required class="input-style" name="direction" id="direction">
+                        <option value="color" data-color="#A6A6A6" disabled selected>Куда хотите ехать</option>
+                        <option value="select" data-color="#1B1F2B">Пункт выбран</option>
+                        <option value="select2" data-color="#1B1F2B">Пункт</option>
+                    </select>
+                    <!-- <input type="text" id="direction"> -->
+                </div>
+            </fieldset>
+            <fieldset class="form__item-box">
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input name="email" placeholder="example@mail.com" required class="input-style" type="email" id="email">
+                </div>
+                <div class="input-box">
+                    <label for="phoneNumber">Телефон</label>
+                    <input name="phoneNumber" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" required class="input-style" type="tel"
+                        id="phoneNumber">
+                </div>
+            </fieldset>
+            <fieldset class="form__item-box">
+                <div class="input-box">
+                    <label for="dateFrom">Дата от</label>
+                    <input name="dateFrom" class="input-style" required type="date" id="dateFrom">
+                </div>
+                <div class="input-box">
+                    <label for="dateUntil">Дата до</label>
+                    <input name="dateUntil" class="input-style" required type="date" id="dateUntil">
+                </div>
+            </fieldset>
+
+            <div class="form__comment-box input-box">
+                <label class="comment-lable" for="comment">Комментарий</label>
+                <textarea class="input-style" id="comment"></textarea>
+            </div>
+            <div class="form__check-age">
+                <span>Вам есть 18 лет?</span>
+                <div class="form__check-age-box">
+                    <div class="form__check-yes-no-flex">
+                        <input class="real-radio" type="radio" id="yes" name="yes-no">
+                        <label class="custom-radio" for="yes"></label>
+                        <label for="yes">Да</label>
+                    </div>
+                    <div class="form__check-yes-no-flex">
+                        <input class="real-radio" type="radio" id="no" name="yes-no">
+                        <label class="custom-radio" for="no"></label>
+                        <label for="no">Нет</label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form__item-box checkbox-block">
+                <input class="checkbox" type="checkbox" id="confirm">
+                <label class="custom-checkbox" for="confirm"></label>
+                <label class="checkbox__label" for="confirm">Нажимая кнопку, я принимаю условия <a
+                        href="javascript:void(0);">Лицензионного договора</a></label>
+            </div>
+            <div class="form__buttons">
+                <a class="find-button find-button--hover" href="javascript:void(0);">Найти тур</a>
+                <button type="button" class="reset-button  reset-button--hover" id="clearForm">Сбросить</button>
+            </div>
+        </form>
+    </div>
+</section>
+                <section class="tour-review wrapper">
+    <div class="info">
+        <h2 class="info__title" id="link-review">Отзывы наших путешественников</h2>
+        <span class="info__sub-title">Идейные соображения высшего порядка, а также рамки и место
+            обучения кадров</span>
+    </div>
+    <div id="tour-review" class="tour-review__rewiew-boxes"></div>
+</section>
+                <section class="photo">
+    <div class="info">
+        <h2 class="info__title">Фотографии путешествий</h2>
+        <span class="info__sub-title">Идейные соображения высшего порядка, а также рамки и место
+            обучения кадров</span>
+    </div>
+    <!-- <div id="images-travel" class="images-travel"> -->
+    <div class="images-travel">
+        <figure class="images-travel__box">
+            <picture><source srcset="img/travel-photo-1.webp" type="image/webp"><img src="img/travel-photo-1.png" alt="Путешествие в горы"></picture>
+            <picture><source srcset="img/travel-photo-2.webp" type="image/webp"><img class="image-off" src="img/travel-photo-2.png" alt="Путешествие в горы"></picture>
+            <picture><source srcset="img/travel-photo-3.webp" type="image/webp"><img class="image-off-viewport" src="img/travel-photo-3.png" alt="Путешествие в горы"></picture>
+            <picture><source srcset="img/travel-photo-4.webp" type="image/webp"><img src="img/travel-photo-4.png" alt="Путешествие в горы"></picture>
+        </figure>
+        <figure class="images-travel__box">
+            <picture><source srcset="img/travel-photo-5.webp" type="image/webp"><img src="img/travel-photo-5.png" alt="Путешествие в горы"></picture>
+            <picture><source srcset="img/travel-photo-6.webp" type="image/webp"><img class="image-off-viewport" src="img/travel-photo-6.png" alt="Путешествие в горы"></picture>
+            <picture><source srcset="img/travel-photo-7.webp" type="image/webp"><img class="image-off" src="img/travel-photo-7.png" alt="Путешествие в горы"></picture>
+            <picture><source srcset="img/travel-photo-8.webp" type="image/webp"><img src="img/travel-photo-8.png" alt="Путешествие в горы"></picture>
+            <picture><source srcset="img/travel-photo-9.webp" type="image/webp"><img src="img/travel-photo-9.png" alt="Путешествие в горы"></picture>
+        </figure>
+        <figure class="images-travel__box">
+            <picture><source srcset="img/travel-photo-10.webp" type="image/webp"><img src="img/travel-photo-10.png" alt="Путешествие в горы"></picture>
+            <picture><source srcset="img/travel-photo-11.webp" type="image/webp"><img src="img/travel-photo-11.png" alt="Путешествие в горы"></picture>
+            <picture><source srcset="img/travel-photo-12.webp" type="image/webp"><img class="image-off-viewport" src="img/travel-photo-12.png" alt="Путешествие в горы"></picture>
+            <picture><source srcset="img/travel-photo-13.webp" type="image/webp"><img class="image-off" src="img/travel-photo-13.png" alt="Путешествие в горы"></picture>
+        </figure>
+    </div>
+</section>
+            </div>
+            <section class="travel-history-section">
+    <div class="info wrapper">
+        <h2 class="info__title" id="link-history">Истории путешествий</h2>
+        <span class="info__sub-title">Идейные соображения высшего порядка, а также рамки и место
+            обучения кадров</span>
+    </div>
+    <div class="travel-history-box wrapper" id="travel-history">
+        <!--------- file travelHistory.js ---------------->
+        <!-- const containerTravelHistory = travelHistory.map(el =>
+        `<div class='travel-history' id='travel-history' style="background-image:${el.background}">
+            <div class='card-info'>
+                <h3 class='card-info__title'>${el.title}</h3>
+                <span class='card-info__subtitle'> ${el.info.text}
+                <ul class='items'>
+                    ${el.info.point ? el.info.point.map(el =>
+                    `<li>${el}</li>`).join('') : ''}
+                </ul>
+            </span>
+        </div>
+    <div class='social-container'>
+        ––––––––––––––––––––––––––––––––––––––
+        --------- reusable component ---------
+                    ${buttonInfo}
+                    -------------
+            export const buttonInfo =
+                `<a href="javascript:void(0);" class='button-info'>
+                    Подробнее
+                    <img src="../img/arrow-btn.svg" alt="arrow" />
+                </a>`
+        ––––––––––––––––––––––––––––––––––––––
+        <div class='social'>
+            ${el.social.map(el =>
+            `<a class='a a--hover a--active' href="javascript:void(0);">${el}</a>`)
+            .join('')}</div>
+            </div>
+        </div>`) -->
+    </div>
+    <div class="lets-go wrapper">
+        <picture><source srcset="img/footer-photo.webp" type="image/webp"><img class="lets-go__img" src="img/footer-photo.png" alt="Дом в горах"></picture>
+        <div class="lets-go__text-box">
+            <h3 class="text-box__title">Пора в путешествие вместе с нами!</h3>
+            <span class="text-box__subtitle">Напиши на почту и узнай подробности на
+                <a class="subtitle__email" href="javascript:void(0);">yourtour@gmail.com</a>
+            </span>
+        </div>
+    </div>
+</section>
+        </div>
+    </div>
+    <footer class="footer-color">
+    <div class="wrapper footer">
+        <span>Наши социальные сети</span>
+        <div class="social-link">
+            <a href="javascript:void(0);">
+                <img src="img/instagram-icon.svg" alt="icon-instagram">
+                <span>instagram</span>
+            </a>
+            <a href="javascript:void(0);">
+                <img src="img/facebook-logo.svg" alt="icon-facebook">
+                <span>facebook</span>
+            </a>
+            <a href="javascript:void(0);">
+                <img src="img/vk-logo.svg" alt="icon-vkontakte">
+                <span>vkontakte</span>
+            </a>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="js/app.min.js?_v=20240314130749"></script>
+</body>
+
+</html>
