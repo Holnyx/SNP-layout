@@ -431,7 +431,7 @@
   cursor: pointer;
 }
 
-.journey-box .menu__button:active {
+.journey-box .menu__button:focus {
   color: #efa501;
 }
 
@@ -454,7 +454,7 @@
   margin-left: -50%;
 }
 
-.journey-box .menu__button:active::before {
+.journey-box .menu__button:focus::before {
   opacity: 1;
   width: 100%;
   margin-left: -50%;
