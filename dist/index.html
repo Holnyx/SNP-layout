@@ -7,12 +7,12 @@
     <meta name="description" content="Краткое описание вашей страницы">
     <meta name="keywords" content="ключевые, слова, вашей, страницы">
     <title>YourTour</title>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css?_v=20240314154402">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css?_v=20240315094951">
     <link rel="preload" href="css/style.min.css" as="font">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&_v=20240314154402"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&_v=20240315094951"
         rel="stylesheet">
     <link rel="icon" href="img/favico.svg" type="image/svg" >
     <link rel="icon" href="img/favico.png" type="image/png" >
@@ -203,17 +203,18 @@
     <div class="travel-history-box wrapper" id="travel-history">
         <!--------- file travelHistory.js ---------------->
         <!-- const containerTravelHistory = travelHistory.map(el =>
-        `<div class='travel-history' id='travel-history' style="background-image:${el.background}">
+    `
+        <div class='travel-history' id='travel-history'>
             <div class='card-info'>
                 <h3 class='card-info__title'>${el.title}</h3>
                 <span class='card-info__subtitle'> ${el.info.text}
-                <ul class='items'>
-                    ${el.info.point ? el.info.point.map(el =>
+                <ul  class='items'>
+                   ${el.info.point ? el.info.point.map(el =>
                     `<li>${el}</li>`).join('') : ''}
                 </ul>
-            </span>
-        </div>
-    <div class='social-container'>
+                </span>
+            </div>
+        <div class='social-container'>
         ––––––––––––––––––––––––––––––––––––––
         --------- reusable component ---------
                     ${buttonInfo}
@@ -229,6 +230,7 @@
             `<a class='a a--hover a--active' href="javascript:void(0);">${el}</a>`)
             .join('')}</div>
             </div>
+            <img class='background-img' src=${el.background}>
         </div>`) -->
     </div>
     <div class="lets-go wrapper">
@@ -263,7 +265,7 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20240314154402"></script>
+    <script src="js/app.min.js?_v=20240315094951"></script>
 </body>
 
 </html>
