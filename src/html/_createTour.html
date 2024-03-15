@@ -28,18 +28,18 @@
                 </div>
                 <div class="input-box">
                     <label for="phoneNumber">Телефон</label>
-                    <input name="phoneNumber" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" required class="input-style" type="tel"
-                        id="phoneNumber">
+                    <input name="phoneNumber" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" required class="input-style" type="phone"
+                        id="phoneNumber" maxlength="12" pattern="^\+7\d{10}$">
                 </div>
             </fieldset>
             <fieldset class="form__item-box">
                 <div class="input-box">
                     <label for="dateFrom">Дата от</label>
-                    <input name="dateFrom" class="input-style" required type="date" id="dateFrom">
+                    <input name="dateFrom" class="input-style" required type="date" id="dateFrom" max="2999-12-31">
                 </div>
                 <div class="input-box">
                     <label for="dateUntil">Дата до</label>
-                    <input name="dateUntil" class="input-style" required type="date" id="dateUntil">
+                    <input name="dateUntil" class="input-style" required type="date" id="dateUntil" max="2999-12-31">
                 </div>
             </fieldset>
 
@@ -64,13 +64,13 @@
                 </div>
             </div>
             <div class="form__item-box checkbox-block">
-                <input class="checkbox" type="checkbox" id="confirm">
-                <label class="custom-checkbox" for="confirm"></label>
+                <input class="checkbox" type="checkbox" id="confirm" required>
+                <label class="custom-checkbox" for="confirm" ></label>
                 <label class="checkbox__label" for="confirm">Нажимая кнопку, я принимаю условия <a
                         href="javascript:void(0);">Лицензионного договора</a></label>
             </div>
             <div class="form__buttons">
-                <a class="find-button find-button--hover" href="javascript:void(0);">Найти тур</a>
+                <button class="find-button find-button--hover" type="submit">Найти тур</button>
                 <button type="button" class="reset-button  reset-button--hover" id="clearForm">Сбросить</button>
             </div>
         </form>
