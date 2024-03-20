@@ -1,3 +1,5 @@
+@import '../color'
+
 .show
     position: relative
     backdrop-filter: blur(54px)
@@ -10,9 +12,9 @@
         background-color: rgba(243, 239, 232, 0.6)
     .header
         .list__item
-            color: #1B1F2B
+            color: $color-black
             &::before
-                background-color: #1B1F2B
+                background-color: $color-black
         &__logo
             filter: none
 .header
@@ -28,29 +30,19 @@
     background: none
     color: white
     &__logo
-        padding-top: 8px
         height: 30.3px
         filter: invert(1) grayscale(1000%) contrast(100)
-        @media (max-width: 425px)
-            height: 22px
     &__list
         padding: 0
         list-style-type: none
         display: flex
         gap: 50px
-        @media (max-width: 1024px)
-            gap: 30px
-        li
-            @media (max-width: 1023px)
-                display: none
 .list__item
     position: relative
     color: white
     font-weight: 400
     font-size: 20px
     line-height: 142%
-    @media (max-width: 768px)
-        font-size: 16px
     &--hover
         &::before
             position: absolute
@@ -60,11 +52,10 @@
             bottom: -3px
             background-color: white
             opacity: 0
-            transition: .3s ease
+            transition: .3s
             pointer-events: none
             left: 50%
-        @media (min-width: 769px)
-            &:hover::before
-                opacity: 1
-                width: 100%
-                margin-left: -50%
+        &:hover::before
+            opacity: 1
+            width: 100%
+            margin-left: -50%

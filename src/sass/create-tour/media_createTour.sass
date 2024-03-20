@@ -1,0 +1,100 @@
+@import '../color'
+@import '../mixins'
+
+@media ( max-width: 1024px )
+    .form
+        padding: 60px
+        fieldset
+            gap: 20px
+
+@media (max-width: 768px)
+    .form
+        fieldset
+            flex-wrap: wrap
+        input[type=date]
+            line-height: 100%
+
+@media (min-width: 769px)
+    .input-box
+        .input-style
+            &:hover
+                background-color: $color-beige-200
+            &:focus-visible
+                outline: solid $color-grey-300
+    .form
+        .checkbox-block
+            .checkbox
+                &__label
+                    a
+                        text-decoration: underline
+                        text-decoration-skip-ink: none
+                        text-decoration-color: transparent
+                        transition: .5s
+                        &:hover
+                            text-decoration-color: $color-black
+                        &:active
+                            text-decoration-color: $color-green-400
+                            color: $color-green-400
+        &__buttons
+            .find-button
+                &--hover
+                    &:hover
+                        background-color: $color-green-300
+                    &:active
+                        background-color: $color-green-200
+            .reset-button
+                &--hover
+                    &:hover
+                        background-color: $color-grey-100
+                    &:active
+                        background-color: $color-grey-200
+@media ( max-width: 640px )
+    .input-box
+        .input-style
+            @include font-style(400,16px,144%,0)
+            padding: 10px
+    .form
+        padding: 20px
+        border-radius: 30px
+        &__item-box
+            .checkbox
+                &__label
+                    @include font-style(400,16px,142%,-0.01em)
+                    text-align: start
+                    width: 248px
+        &__comment-box
+            textarea
+                height: 132px
+            .comment-lable
+                @include font-style(400,16px,142%,0)
+        .checkbox-block
+            gap: 10px
+            .custom-checkbox
+                width: 16px
+                height: 16px
+                border-radius: 4px
+                &::before
+                    width: 10px
+                    height: 10px
+        &__check-age
+            @include font-style(400,16px,142%,0)
+        .custom-radio
+            width: 16px
+            height: 16px
+            &::before
+                width: 8px
+                height: 8px
+        fieldset
+            gap: 30px
+            label
+                @include font-style(400,16px,142%,0)
+                padding-top: 2px
+        &__buttons
+            margin-bottom: 30px
+            gap: 10px
+            .find-button
+                height: 47px
+                @include font-style(400,16px,142%,0)
+            .reset-button
+                @include font-style(400,16px,142%,0)
+                height: 47px

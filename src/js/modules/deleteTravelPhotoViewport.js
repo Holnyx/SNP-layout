@@ -19,9 +19,9 @@ export const resize = () => {
             removeImages(images)
         } else if (window.innerWidth <= 768) {
             removeImages(imagesViewport);
-            removeImages(images);
         } else {
-            restoreImages(images); restoreImages(imagesViewport);
+            restoreImages(imagesViewport);
+            restoreImages(images);
         }
     });
 }

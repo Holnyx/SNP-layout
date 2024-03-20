@@ -1,0 +1,40 @@
+@import '../color'
+@import '../mixins'
+
+.tour-review
+    &__rewiew-boxes
+        display: flex
+        justify-content: space-between
+        gap: 30px
+        height: 674px
+.review
+    border-radius: 50px
+    padding: 40px
+    max-width: 570px
+    width: 100%
+    box-sizing: border-box
+    background-color: $color-beige-200
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &__info
+        @include font-style(700,23px,122%,0)
+        text-align: start
+    img
+        height: 75px
+        width: 75px
+        border-radius: 50%
+    .person-container
+        display: flex
+        justify-content: space-between
+        align-items: end
+        &__text
+            display: flex
+            flex-direction: column
+            text-align: start
+            gap: 8px
+            span:first-child
+                @include font-style(500,35px,122%,0)
+            span:last-child
+                @include font-style(400,17px,142%,-0.01em)
+                color: $color-grey-300

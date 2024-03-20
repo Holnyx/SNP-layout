@@ -1,0 +1,102 @@
+@import '../color'
+@import '../mixins'
+
+.journey-box
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .menu
+        margin-bottom: 80px
+        &__title
+            @include font-style(700,59px,124%,0)
+            margin: 0 0 35px
+        &__items
+            padding: 0
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            gap: 30px
+            @include font-style(700,23px,122%,0)
+        &__button
+            @include font-style(700,23px,122%,0)
+            background-color: transparent
+            border: none
+            position: relative
+            color: $color-black
+            transition: .3s ease
+            cursor: pointer
+            &:focus
+                color: $color-orange-200
+            &::before
+                position: absolute
+                content: ''
+                height: 2px
+                left: 50%
+                width: 0%
+                bottom: -6px
+                background-color: $color-black
+                opacity: 0
+                transition: .2s ease
+                pointer-events: none
+            &:hover::before
+                opacity: 1
+                width: 100%
+                margin-left: -50%
+            &:focus::before
+                opacity: 1
+                width: 100%
+                margin-left: -50%
+                background-color: $color-orange-200
+    .travel-boxes
+        display: flex
+        flex-wrap: wrap
+        gap: 30px
+        justify-content: center
+    .travel-card
+        max-width: 370px
+        width: 100%
+        height: 531px
+        background-repeat: no-repeat
+        background-position: center
+        border-radius: 50px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        padding: 50px 50px 42px
+        color: white
+        position: relative
+        overflow: hidden
+        box-sizing: border-box
+        transition: .3s
+        background-size: 100%
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%)
+            z-index: 1
+        .button-info
+            border-radius: 50px
+            padding: 8px 20px
+            transform: translateX(-20px)
+        & > *
+            position: relative
+            z-index: 2
+        &__content
+            display: flex
+            justify-content: start
+            align-items: baseline
+            flex-direction: column
+        &__title
+            @include font-style(500,35px,122%,0)
+            margin: 0
+            width: min-content
+            text-align: start
+            margin-bottom: 16px
+        &__subtitle
+            @include font-style(400,17px,142%,0)

@@ -1,0 +1,35 @@
+@import '../color'
+@import '../mixins'
+
+.photo
+    h2
+        max-width: max-content
+    .images-travel
+        padding: 0 30px
+        flex-wrap: wrap
+        display: flex
+        &__box
+            display: grid
+            justify-content: center
+            grid-template-columns: auto auto
+            grid-auto-rows: auto auto
+            gap: 30px
+            width: 100%
+            margin: 0
+            @include media_1024(20px)
+            picture
+                height: 300px
+                &:nth-child(-n+4)
+                    @include grid_row_column(1,5)
+                    @include grid-column-media(4,3)
+                &:nth-child(n+5):nth-child(-n+9)
+                    @include grid_row_column(2,4)
+                    @include grid-column-media(3,2)
+                &:nth-child(n+10)
+                    @include grid_row_column(3,5)
+                    @include grid-column-media(4,3)
+        img
+            border-radius: 50px
+            height: 300px
+            object-fit: cover
+            width: 100%

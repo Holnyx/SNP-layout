@@ -1,0 +1,183 @@
+@import '../color'
+@import '../mixins'
+
+.input-box
+    display: flex
+    flex-direction: column
+    margin: 0 auto
+    width: 100%
+    select
+        appearance: none
+        background: url('@img/ic-dropdown.svg') no-repeat right
+        background-position-x: 95.7%
+        color: $color-grey-300
+
+    .input-style
+        border: 1px solid $color-beige-200
+        background-color: $color-beige-100
+        border-radius: 10px
+        padding: 20px
+        @include font-style(400,20px,142%,0)
+        box-sizing: border-box
+        transition: .3s
+        outline: solid transparent
+        &:-webkit-autofill
+            -webkit-box-shadow: 0 0 0px 1000px $color-beige-100 inset
+        &:focus-webkit-autofill
+            -webkit-box-shadow: 0 0 0px 1000px $color-beige-200 inset
+.form
+    display: flex
+    flex-direction: column
+    background-color: white
+    padding: 70px
+    border-radius: 50px
+    gap: 30px
+    &__item-box
+        .checkbox
+            position: absolute
+            z-index: -1
+            opacity: 0
+            &__label
+                @include font-style(400,17px,142%,-0.01em)
+                text-align: start
+                cursor: pointer
+    &__comment-box
+        textarea
+            resize: none
+            height: 152px
+        .comment-lable
+            @include font-style(400,20px,142%,0)
+            margin-bottom: 8px
+            text-align: start
+    .checkbox-block
+        display: flex
+        gap: 19px
+        .checkbox
+            &__label
+                color: $color-grey-300
+                a
+                    color: $color-black
+        .custom-checkbox
+            display: inline-block
+            width: 22px
+            height: 22px
+            border-radius: 6px
+            vertical-align: text-top
+            border: $color-black solid 2px
+            position: relative
+            background: transparent
+            cursor: pointer
+
+            &::before
+                position: absolute
+                content: ''
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%) scale(0)
+                transition: .2s transform
+                width: 22px
+                height: 22px
+
+    &__check-age
+        @include font-style(400,20px,142%,0)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 8px
+
+    &__check-age-box
+        display: flex
+        flex-direction: row
+        gap: 31px
+    &__check-yes-no-flex
+        display: flex
+        gap: 11px
+        label
+            cursor: pointer
+    .custom-radio
+        display: inline-block
+        width: 22px
+        height: 22px
+        border-radius: 50%
+        background: transparent
+        vertical-align: text-top
+        border: $color-black solid 2px
+        position: relative
+        cursor: pointer
+        &::before
+            position: absolute
+            content: ''
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%) scale(0)
+            width: 12px
+            height: 12px
+            background-color: $color-black
+            border-radius: 50%
+            transition: .2s
+    .real-radio
+        width: 0
+        height: 0
+        position: absolute
+        z-index: -1
+        opacity: 0
+    fieldset
+        gap: 30px
+        display: flex
+        border: none
+        padding: 0
+        margin: 0
+        label
+            @include font-style(400,20px,142%,0)
+            margin-bottom: 6px
+            text-align: start
+    input::placeholder
+        color: $color-grey-300
+
+    input[type=date]
+        color: $color-grey-300
+        text-transform: uppercase
+        &:valid
+            color: $color-black
+        &::-webkit-calendar-picker-indicator
+            opacity: 0
+            transition: .3s
+        &:focus::-webkit-calendar-picker-indicator
+            opacity: 1
+            // background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>')
+    &__buttons
+        display: flex
+        border-radius: 10px
+        gap: 30px
+        .find-button
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 10px
+            color: white
+            max-width: 235px
+            @include font-style(400,20px,142%,0)
+            width: 100%
+            height: 58px
+            background-color: $color-green-400
+            transition: .3s
+            border: none
+
+        .reset-button
+            border-radius: 10px
+            color: $color-green-400
+            background-color: $color-green-100
+            border: none
+            max-width: 235px
+            width: 100%
+            height: 58px
+            @include font-style(400,20px,142%,0)
+            transition: .3s
+
+.real-radio:checked + .custom-radio::before
+    transform: translate(-50%, -50%) scale(1)
+.checkbox:checked + .custom-checkbox::before
+    transform: translate(-50%, -50%) scale(1)
+    background-image: url('@img/Rectangle.svg')
+    background-repeat: no-repeat
+    background-position: center

@@ -1,0 +1,27 @@
+@import '../color'
+@import '../mixins'
+
+@media ( max-width: 1024px )
+    .photo
+        .images-travel
+            padding: 0 20px
+
+@media ( max-width: 768px )
+    .photo
+        .images-travel
+            &__box
+                gap: 10px
+                &:nth-child(odd)
+                    width: 100%
+                    gap: 18px
+
+@media ( max-width: 425px )
+    .photo
+        .images-travel
+            gap: 18px
+            &__box
+                picture
+                    height: 110px
+            img
+                height: 110px
+                border-radius: 20px
