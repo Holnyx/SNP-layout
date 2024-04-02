@@ -6,97 +6,155 @@
     flex-direction: column
     justify-content: center
     align-items: center
+
     .menu
-        margin-bottom: 80px
+        margin-bottom: 104px
+        @include mobile-sm
+            margin-bottom: 50px
+
         &__title
-            @include font-style(700,59px,124%,0)
             margin: 0 0 35px
+            @include font-style(700,59px,124%,0)
+            @include mobile-xl
+                margin: 0 0 30px
+                @include font-style(700,40px,112%,0.02em)
+            @include mobile-sm
+                margin: 0 0 30px
+                @include font-style(700,34px,112%,0.02em)
+
         &__items
-            padding: 0
             display: flex
             flex-wrap: wrap
             justify-content: center
-            gap: 30px
+            gap: 18px
+            padding: 0
             @include font-style(700,23px,122%,0)
+            @include mobile-xl
+                margin: 0
+                @include font-style(700,18px,142%,0)
+            @include mobile-sm
+                gap: 10px
+                width: 318px
+                @include font-style(700,16px,142%,0)
+
         &__button
+            position: relative
             @include font-style(700,23px,122%,0)
+            color: $color-black
             background-color: transparent
             border: none
-            position: relative
-            color: $color-black
-            transition: .3s ease
+            transition: .3s color
             cursor: pointer
             &:focus
                 color: $color-orange-200
             &::before
                 position: absolute
                 content: ''
-                height: 2px
-                left: 50%
-                width: 0%
                 bottom: -6px
+                left: 50%
+                height: 2px
+                width: 0
                 background-color: $color-black
                 opacity: 0
                 transition: .2s ease
-                pointer-events: none
             &:hover::before
-                opacity: 1
                 width: 100%
                 margin-left: -50%
-            &:focus::before
                 opacity: 1
+            &:focus::before
                 width: 100%
                 margin-left: -50%
                 background-color: $color-orange-200
+                opacity: 1
+            @include mobile-xl
+                @include font-style(700,16px,142%,0)
+
     .travel-boxes
         display: flex
         flex-wrap: wrap
-        gap: 30px
         justify-content: center
+        gap: 30px
+        @include laptop
+            gap: 18px
+
     .travel-card
-        max-width: 370px
-        width: 100%
-        height: 531px
-        background-repeat: no-repeat
-        background-position: center
-        border-radius: 50px
+        position: relative
         display: flex
         flex-direction: column
         justify-content: space-between
         align-items: flex-start
+        max-width: 370px
+        width: 100%
+        height: 531px
         padding: 50px 50px 42px
         color: white
-        position: relative
+        background-size: 100%
+        background-repeat: no-repeat
+        background-position: center
+        border-radius: 50px
+        transition: .3s background-size
         overflow: hidden
         box-sizing: border-box
-        transition: .3s
-        background-size: 100%
         &::after
             content: ""
             position: absolute
             top: 0
             left: 0
+            z-index: 1
             width: 100%
             height: 100%
             background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%)
-            z-index: 1
+        &--hover
+            &:hover
+                background-size: 120%
+                @include mobile-xl
+                    background-size: 100%
+
+        @include laptop
+            max-width: 450px
+        @include tablet-xl
+            max-width: 318px
+            height: 318px
+            padding: 25px
+            border-radius: 20px
+
         .button-info
-            border-radius: 50px
             padding: 8px 20px
+            border-radius: 50px
             transform: translateX(-20px)
+            &:hover
+                background-color: $color-green-400
+                @include mobile-xl
+                    background-color: transparent
+            &:active
+                background-color: $color-orange-200
+                @include mobile-xl
+                    background-color: transparent
+
         & > *
             position: relative
             z-index: 2
+
         &__content
             display: flex
             justify-content: start
             align-items: baseline
             flex-direction: column
+
         &__title
-            @include font-style(500,35px,122%,0)
-            margin: 0
             width: min-content
-            text-align: start
+            margin: 0
             margin-bottom: 16px
+            @include font-style(500,35px,122%,0)
+            text-align: start
+            @include laptop
+                width: max-content
+            @include tablet-xl
+                margin-bottom: 14px
+                @include font-style(700,23px,120%,0.04em)
+                
+
         &__subtitle
             @include font-style(400,17px,142%,0)
+            @include mobile-xl
+                @include font-style(400,16px,142%,-0.01em)

@@ -4,74 +4,141 @@
 .travel-history-section
     .info__title
         max-width: max-content
+
 .travel-history-box
     display: flex
     flex-direction: column
     gap: 50px
     margin-top: 100px
+    @include mobile-sm
+        gap: 20px
+        margin-top: 0
+
     .travel-history
         position: relative
-        border-radius: 50px
         display: flex
         flex-direction: column
-        padding: 60px 60px 52px
-        box-sizing: border-box
+        justify-content: space-between
         width: 100%
         max-width: 1170px
         height: 567px
+        padding: 60px 60px 52px
+        border-radius: 50px
+        box-sizing: border-box
         overflow: hidden
-        justify-content: space-between
+        @include mobile-xl
+            border-radius: 20px
+        @include mobile-sm
+            height: 455px
+            padding: 30px
+            border-radius: 20px
+        &:hover
+            .background-img
+                transform: scale(1.2)
+                @include mobile-xl
+                    transform: scale(1)
+
         .background-img
             position: absolute
+            left: 0
+            top: 0
             z-index: 2
             width: 100%
             height: 100%
-            left: 0
-            top: 0
-            transition: .3s
+            transition: .3s transform
             object-fit: cover
+
         .button-info
-            border-radius: 50px
             padding: 8px 20px
+            border-radius: 50px
             transform: translateX(-20px)
+            @include mobile-xl
+                padding: 0px 20px
+            &:hover
+                background-color: $color-green-400
+                @include mobile-xl
+                    background-color: transparent
+            &:active
+                background-color: $color-orange-200
+                @include mobile-xl
+                    background-color: transparent
+
         & > *
             position: relative
             z-index: 3
+
         &::after
             content: ""
             position: absolute
             top: 0
             left: 0
+            z-index: 2
             width: 100%
             height: 100%
-            z-index: 2
             background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%)
+
         .card-info
-            color: #fff
-            text-align: start
             width: 100%
             max-width: 554px
+            color: #fff
+            text-align: start
+
             &__title
-                @include font-style(500,35px,122%,0)
                 margin: 0 0 37px
+                @include font-style(500,35px,122%,0)
+                @include mobile-sm
+                    width: min-content
+                    margin: 0 0 20px
+                    @include font-style(700,23px,120%,0.04em)
+
             &__subtitle
-                @include font-style(400,20px,142%,0)
                 margin: 0
+                @include font-style(400,20px,142%,0)
+                @include mobile-xl
+                    @include font-style(400,16px,144%,0)
+
                 .items
                     margin-top: 26px
                     padding-left: 30px
+                    @include mobile-xl
+                        margin-top: 24px
+                        padding-left: 24px
+
                     li
                         list-style-type: disc
+
         .social-container
             display: flex
             justify-content: space-between
             align-items: center
+
             .social
-                gap: 35px
                 display: flex
+                gap: 35px
+                @include mobile-xl
+                    display: none
+
                 .a
                     @include font-style(400,20px,142%,0)
                     color: #fff
+                    &--hover
+                        text-decoration: underline
+                        text-decoration-skip-ink: none
+                        text-decoration-color: transparent
+                        text-decoration-thickness: 1px
+                        text-underline-offset: 2px
+                        transition: .5s
+                        &:hover
+                            text-decoration-color: #fff
+                            @include mobile-xl
+                                text-decoration-color: transparent
+                    &--active
+                        &:active
+                            text-decoration-color: $color-orange-200
+                            color: $color-orange-200
+                            @include mobile-xl
+                                color: #fff
+                                text-decoration-color: transparent
 
 .lets-go
     display: flex
@@ -79,21 +146,54 @@
     justify-content: center
     gap: 30px
     margin: 135px auto
+    @include mobile-xl
+        flex-wrap: wrap
+        gap: 28px
+        margin: 75px auto
+
     &__img
-        border-radius: 50px
         width: 370px
         height: 370px
+        border-radius: 50px
+        @include mobile-xl
+            width: 130px
+            height: 133px
+            border-radius: 20px
+
     &__text-box
-        text-align: start
         max-width: 371px
         width: 100%
+        text-align: start
+        @include mobile-xl
+            width: 292px
+            text-align: center
+
         .text-box
             &__title
-                @include font-style(500,35px,122%,0)
                 margin: 0 0 20px
+                @include font-style(500,35px,122%,0)
+                @include mobile-xl
+                    @include font-style(700,23px,120%,0.04em)
+
             &__subtitle
                 @include font-style(400,20px,142%,0)
                 color: $color-grey-300
+                @include mobile-xl
+                    @include font-style(400,16px,142%,0)
 .subtitle
     &__email
         color: $color-black
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        text-decoration-color: transparent
+        text-decoration-thickness: 1px
+        text-underline-offset: 2px
+        transition: .5s
+        &:hover
+            text-decoration-color: $color-black
+            @include mobile-xl
+                text-decoration-color: transparent
+        &:active
+            color: $color-green-400
+            @include mobile-xl
+                color: $color-black

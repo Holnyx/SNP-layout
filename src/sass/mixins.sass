@@ -10,10 +10,54 @@
     @media (max-width: 768px)
         grid-column: span $num_768
 
-@mixin media_1024($g)
-    @media ( max-width: 1024px )
-        gap: $g
 
 @mixin grid_row_column($row,$column)
     grid-row: $row
     grid-column: span $column
+
+
+@mixin mobile-sm
+    @media (max-width: 425px)
+        @content
+
+@mixin mobile-md
+    @media (max-width: 640px)
+        @content
+
+@mixin mobile-xl
+    @media (max-width: 768px)
+        @content
+
+@mixin tablet-sm
+    @media (max-width: 800px)
+        @content
+
+@mixin tablet-md
+    @media (max-width: 960px)
+        @content
+
+@mixin tablet-xl
+    @media (max-width: 1023px)
+        @content
+
+@mixin laptop
+    @media (max-width: 1279px)
+        @content
+
+
+
+// 1279
+
+// // 1920, 1600, 1440, 1280, 1024, 
+
+//     768, 425
+
+// min-width: 769px
+
+// max-width: 1279px laptop
+
+
+    // // Для разрешений до 1024px
+// @mixin media-max-width-1024px
+// @media (max-width: 1024px)
+//     @content

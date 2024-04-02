@@ -1,7 +1,8 @@
+@import '../mixins'
 .gap
     display: flex
     flex-direction: column
     justify-content: center
     gap: 136px
-    @media ( max-width: 768px )
+    @include mobile-xl
         gap: 75px
