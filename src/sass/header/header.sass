@@ -34,7 +34,7 @@
     &__logo
         height: 30.3px
         filter: invert(1) grayscale(1000%) contrast(100)
-        @include mobile-sm
+        @include mobile
             height: 22px
             width: 100%
 
@@ -46,14 +46,14 @@
         @include laptop
             gap: 30px
         li
-            @include tablet-xl
+            @include mobile
                 display: none
 
 .list__item
     position: relative
     @include font-style(400,20px,142%,0)
     color: white
-    @include mobile-xl
+    @include mobile
         font-size: 16px
 
     &--hover

@@ -1,3 +1,5 @@
+@import './viewport'
+    
 @mixin font-style($fw, $fs, $lh, $ls)
     font-weight: $fw
     font-size: $fs
@@ -16,48 +18,10 @@
     grid-column: span $column
 
 
-@mixin mobile-sm
-    @media (max-width: 425px)
-        @content
-
-@mixin mobile-md
-    @media (max-width: 640px)
-        @content
-
-@mixin mobile-xl
-    @media (max-width: 768px)
-        @content
-
-@mixin tablet-sm
-    @media (max-width: 800px)
-        @content
-
-@mixin tablet-md
-    @media (max-width: 960px)
-        @content
-
-@mixin tablet-xl
-    @media (max-width: 1023px)
+@mixin mobile
+    @media (max-width: $mobile)
         @content
 
 @mixin laptop
-    @media (max-width: 1279px)
+    @media (max-width: $laptop)
         @content
-
-
-
-// 1279
-
-// // 1920, 1600, 1440, 1280, 1024, 
-
-//     768, 425
-
-// min-width: 769px
-
-// max-width: 1279px laptop
-
-
-    // // Для разрешений до 1024px
-// @mixin media-max-width-1024px
-// @media (max-width: 1024px)
-//     @content

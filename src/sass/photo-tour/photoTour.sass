@@ -11,7 +11,7 @@
         padding: 0 30px
         @include laptop
             padding: 0 20px
-        @include mobile-sm
+        @include mobile
             gap: 18px
 
         &__box
@@ -25,11 +25,9 @@
             @include laptop
                 gap: 20px
                 row-gap: 30px
-            @include mobile-xl
+            @include mobile
                 gap: 10px
-                &:nth-child(odd)
-                    width: 100%
-                    gap: 18px
+                row-gap: 18px
 
             picture
                 height: 300px
@@ -42,7 +40,7 @@
                 &:nth-child(n+10)
                     @include grid_row_column(3,5)
                     @include grid-column-media(4,3)
-                @include mobile-sm
+                @include mobile
                     height: 110px
 
         img
@@ -50,6 +48,6 @@
             height: 300px
             border-radius: 50px
             object-fit: cover
-            @include mobile-sm
+            @include mobile
                 height: 110px
                 border-radius: 20px

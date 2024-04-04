@@ -29,19 +29,17 @@
             height: 100%
             background: rgba(0, 0, 0, 0.4)
             z-index: 1
-    @include mobile-xl
+    @include mobile
         gap: 40px
         height: 488px
-    @include mobile-sm
+    @include mobile
         height: 400px
 
     &__title
         width: min-content
         margin: 0
         @include font-style(700,96px,109%,0.02em)
-        @include mobile-xl
-            @include font-style(700,68px,109%,0.02em)
-        @include mobile-sm
+        @include mobile
             @include font-style(700,34px,112%,0.02em)
 
     &__sub-title
@@ -50,11 +48,7 @@
         @include laptop
             max-width: 442px
             width: 100%
-        @include mobile-xl
-            max-width: 300px
-            width: 100%
-            @include font-style(400,18px,142%,0)
-        @include mobile-sm
+        @include mobile
             width: 310px
             @include font-style(400,16px,142%,0)
             
@@ -66,16 +60,16 @@
         color: black
         background-color: white
         border-radius: 10px
-        transition: .3s background-color
-        @include mobile-sm
+        transition: .3s background-color ease
+        @include mobile
             @include font-style(400,16px,142%,-0.01em)
         &--hover
             &:hover
                 background-color: $color-orange-200
-                @include mobile-xl
+                @include mobile
                     background-color: white
         &--active
             &:active
                 background-color: $color-orange-100
-                @include mobile-xl
+                @include mobile
                     background-color: white

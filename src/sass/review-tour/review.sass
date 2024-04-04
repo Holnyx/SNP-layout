@@ -8,10 +8,8 @@
         gap: 30px
         @include laptop
             gap: 18px
-        @include tablet-xl
-        justify-content: center
-            height: max-content
-        @include mobile-xl
+        @include mobile
+            justify-content: center
             flex-wrap: wrap
             height: min-content
 
@@ -26,9 +24,8 @@
     border-radius: 50px
     box-sizing: border-box
     gap: 70px
-    @include tablet-xl
+    @include mobile
         gap: 40px
-    @include tablet-sm
         max-width: 318px
         padding: 20px
         border-radius: 20px
@@ -36,7 +33,7 @@
     &__info
         @include font-style(700,23px,122%,0)
         text-align: start
-        @include tablet-xl
+        @include mobile
             @include font-style(700,16px,144%,0)
 
     img
@@ -57,11 +54,11 @@
 
             span:first-child
                 @include font-style(500,35px,122%,0)
-                @include tablet-md
+                @include mobile
                     @include font-style(700,23px,120%,0.04em)
 
             span:last-child
                 @include font-style(400,17px,142%,-0.01em)
                 color: $color-grey-300
-                @include tablet-md
+                @include mobile
                     @include font-style(400,16px,142%,-0.01em)

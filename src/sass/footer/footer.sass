@@ -6,7 +6,7 @@
     align-items: center
     height: 88px
     background-color: $color-beige-200
-    @include mobile-xl
+    @include mobile
         height: 95px
     span:first-child
         color: $color-grey-300
@@ -16,9 +16,9 @@
     justify-content: space-between
     width: 100%
     @include font-style(400,20px,142%,0)
-    @include mobile-xl
-    flex-wrap: wrap
-        justify-content: center
+    @include mobile
+        flex-wrap: wrap
+        justify-content: space-evenly
         gap: 7px
         padding: 21px
         font-size: 16px
@@ -28,7 +28,7 @@
     align-items: center
     justify-content: space-between
     gap: 25px
-    @include mobile-xl
+    @include mobile
         gap: 15px
     &>a
         display: flex
@@ -41,10 +41,10 @@
         text-decoration-color: transparent
         text-decoration-thickness: 1px
         text-underline-offset: 6px
-        transition: .5s text-decoration-color
+        transition: .5s text-decoration-color ease
         &:hover
             text-decoration-color: $color-black
-            @include mobile-xl
+            @include mobile
                 text-decoration-color: transparent
-        @include mobile-xl
+        @include mobile
             gap: 5px

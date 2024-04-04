@@ -1,11 +1,8 @@
 @import '../color'
 @import '../mixins'
 
-.create-tour
-    .info
-        margin-bottom: 40px
-
 .input-box
+    position: relative
     display: flex
     flex-direction: column
     width: 100%
@@ -13,9 +10,15 @@
 
     select
         appearance: none
-        color: $color-grey-300
-        background: url('@img/ic-dropdown.svg') no-repeat right
-        background-position-x: 95.7%
+    
+    .ic-dropdown
+        position: absolute
+        right: 20px
+        top: 58px
+        @include mobile
+            right: 16px
+            top: 40px
+            width: 18px
 
     .input-style
         padding: 20px
@@ -25,7 +28,7 @@
         border-radius: 10px
         outline: solid transparent
         box-sizing: border-box
-        transition: .3s background-color
+        transition: .3s background-color ease
         &:hover
             background-color: $color-beige-200
         &:focus-visible
@@ -34,12 +37,12 @@
             -webkit-box-shadow: 0 0 0px 1000px $color-beige-100 inset
         &:focus-webkit-autofill
             -webkit-box-shadow: 0 0 0px 1000px $color-beige-200 inset
-        @include mobile-xl
+        @include mobile
             &:hover
                 background-color: none
             &:focus-visible
                 outline: none
-        @include mobile-md
+        @include mobile
             padding: 10px
             @include font-style(400,16px,144%,0)
 
@@ -52,7 +55,7 @@
     border-radius: 50px
     @include laptop
         padding: 60px
-    @include mobile-md
+    @include mobile
         padding: 20px
         border-radius: 30px
     &__item-box
@@ -65,7 +68,7 @@
                 @include font-style(400,17px,142%,-0.01em)
                 text-align: start
                 cursor: pointer
-                @include mobile-md
+                @include mobile
                     width: 248px
                     @include font-style(400,16px,142%,-0.01em)
                     text-align: start
@@ -75,20 +78,20 @@
         textarea
             height: 152px
             resize: none
-            @include mobile-md
+            @include mobile
                 height: 132px
 
         .comment-lable
             margin-bottom: 8px
             @include font-style(400,20px,142%,0)
             text-align: start
-            @include mobile-md
+            @include mobile
                 @include font-style(400,16px,142%,0)
 
     .checkbox-block
         display: flex
         gap: 19px
-        @include mobile-md
+        @include mobile
             gap: 10px
 
         .checkbox
@@ -100,13 +103,13 @@
                     text-decoration: underline
                     text-decoration-skip-ink: none
                     text-decoration-color: transparent
-                    transition: .5s
+                    transition: .5s ease
                     &:hover
                         text-decoration-color: $color-black
                     &:active
                         text-decoration-color: $color-green-400
                         color: $color-green-400
-                    @include mobile-xl
+                    @include mobile
                         &:hover
                             text-decoration-color: transparent
                         &:active
@@ -123,19 +126,7 @@
             border-radius: 6px
             border: $color-black solid 2px
             cursor: pointer
-            &::before
-                position: absolute
-                content: ''
-                left: 50%
-                top: 50%
-                width: 22px
-                height: 22px
-                transform: translate(-50%, -50%) scale(0)
-                transition: .2s transform
-                @include mobile-md
-                    width: 10px
-                    height: 10px
-            @include mobile-md
+            @include mobile
                 width: 16px
                 height: 16px
                 border-radius: 4px
@@ -146,7 +137,7 @@
         align-items: flex-start
         gap: 8px
         @include font-style(400,20px,142%,0)
-        @include mobile-md
+        @include mobile
             @include font-style(400,16px,142%,0)
 
     &__check-age-box
@@ -180,11 +171,11 @@
             background-color: $color-black
             border-radius: 50%
             transform: translate(-50%, -50%) scale(0)
-            transition: .2s transform
-            @include mobile-md
+            transition: .2s transform ease
+            @include mobile
                 width: 8px
                 height: 8px
-        @include mobile-md
+        @include mobile
             width: 16px
             height: 16px
 
@@ -203,15 +194,15 @@
         border: none
         @include laptop
             gap: 20px
-        @include mobile-xl
+        @include mobile
             flex-wrap: wrap
-        @include mobile-md
             gap: 30px
+            
         label
             margin-bottom: 6px
             text-align: start
             @include font-style(400,20px,142%,0)
-            @include mobile-md
+            @include mobile
                 padding-top: 2px
                 @include font-style(400,16px,142%,0)
 
@@ -225,17 +216,17 @@
             color: $color-black
         &::-webkit-calendar-picker-indicator
             opacity: 0
-            transition: .3s opacity
+            transition: .3s opacity ease
         &:focus::-webkit-calendar-picker-indicator
             opacity: 1
-        @include mobile-xl
+        @include mobile
             line-height: 100%
 
     &__buttons
         display: flex
         border-radius: 10px
         gap: 30px
-        @include mobile-md
+        @include mobile
             gap: 10px
             margin-bottom: 30px
 
@@ -251,18 +242,18 @@
             background-color: $color-green-400
             border: none
             border-radius: 10px
-            transition: .3s background-color
+            transition: .3s background-color ease
             &--hover
                 &:hover
                     background-color: $color-green-300
                 &:active
                     background-color: $color-green-200
-                @include mobile-xl
+                @include mobile
                     &:hover
                         background-color: $color-green-400
                     &:active
                         background-color: $color-green-400
-            @include mobile-md
+            @include mobile
                 height: 47px
                 @include font-style(400,16px,142%,0)
 
@@ -275,26 +266,34 @@
             background-color: $color-green-100
             border: none
             border-radius: 10px
-            transition: .3s background-color
+            transition: .3s background-color ease
             &--hover
                 &:hover
                     background-color: $color-grey-100
                 &:active
                     background-color: $color-grey-200
-                @include mobile-xl
+                @include mobile
                     &:hover
                         background-color: $color-green-100
                     &:active
                         background-color: $color-green-100
-            @include mobile-md
+            @include mobile
                 height: 47px
                 @include font-style(400,16px,142%,0)
 
 .real-radio:checked + .custom-radio::before
     transform: translate(-50%, -50%) scale(1)
 
-.checkbox:checked + .custom-checkbox::before
-    background-image: url('@img/Rectangle.svg')
-    background-repeat: no-repeat
-    background-position: center
-    transform: translate(-50%, -50%) scale(1)
+.custom-checkbox
+    .custom-checkbox-img
+        position: absolute
+        left: 50%
+        top: 50%
+        width: 18px
+        height: 18px
+        transition: .2s transform ease
+        transform: translate(-50%, -50%) scale(0)
+
+.checkbox:checked + .custom-checkbox
+    .custom-checkbox-img
+        transform: translate(-50%, -50%) scale(1)
