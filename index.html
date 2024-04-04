@@ -7,12 +7,12 @@
     <meta name="description" content="Идеальные путешествия существуют">
     <meta name="keywords" content="путешествия, туры, туризм, отдых">
     <title>YourTour</title>
-    <link rel="stylesheet" type="text/css" href="css/style.min.css?_v=20240402125509">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css?_v=20240404133544">
     <link rel="preload" href="css/style.min.css" as="font">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&_v=20240402125509"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&_v=20240404133544"
         rel="stylesheet">
     <link rel="icon" href="img/favico.svg" type="image/svg" >
     <link rel="icon" href="img/favico.png" type="image/png" >
@@ -21,7 +21,7 @@
 <body>
     <div>
         <header class="header" id="header">
-    <div class="header wrapper wrapper-laptop">
+    <div class="header wrapper">
         <a href="#link-start">
             <svg alt="YourTour" class='header__logo' width="181.835938" height="30.239990" viewBox="0 0 181.836 30.24"
                 fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -62,8 +62,8 @@
         </ul>
     </div>
     <div class="travel-boxes wrapper" id='journey'>
-<!--------- file journey.js ---------------->
-    <!-- const journey = items.map(el =>
+        <!--------- file journey.js ---------------->
+        <!-- const journey = items.map(el =>
             `<div class='travel-card travel-card--hover' 
             id='journey' style="background-image:${el.background}">
                 <div class='travel-card__content'>
@@ -75,13 +75,18 @@
                     ${buttonInfo}
                     -------------
                 export const buttonInfo =
-                `<a href="javascript:void(0);" class='button-info'>
-                    Подробнее
-                    <img src="../img/arrow-btn.svg" alt="arrow" />
+                 ` <a href="javascript:void(0);" class='button-info'>Подробнее
+                <svg alt="Arrow" width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.7004 12.2833L16.1535 5.79682C15.7541 5.40106 15.1063 5.40106 14.7068 5.79682C14.3073 6.19266 14.3073 
+                    6.83433 14.7068 7.23017L19.5074 11.9865H2.02294C1.45803 11.9865 1 12.4403 1 13C1 13.5596 1.45803 14.0135 2.02294 
+                    14.0135H19.5074L14.707 18.7698C14.3075 19.1656 14.3075 19.8073 14.707 20.2032C14.9067 20.4009 15.1686 20.5 15.4304 
+                    20.5C15.6921 20.5 15.9539 20.4009 16.1537 20.2032L22.7004 13.7167C23.0999 13.3208 23.0999 12.6792 22.7004 12.2833Z" 
+                    fill="#fff"/>
+                </svg>    
                 </a>`
         ––––––––––––––––––––––––––––––––––––––
     </div>`)-->
-<!------------------------------------------------->
+        <!------------------------------------------------->
     </div>
 </section>
                 <section class="create-tour">
@@ -101,10 +106,15 @@
                 <div class="input-box">
                     <label for="direction">Направление</label>
                     <select required class="input-style" name="direction" id="direction">
-                        <option value="color" disabled selected>Куда хотите ехать</option>
+                        <option value="color" disabled selected>Куда хотите ехать </option>
                         <option value="select">Пункт выбран</option>
                         <option value="select2">Пункт выбран</option>
                     </select>
+                    <svg class="ic-dropdown" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13 19.4141L4.29289 10.707C3.90236 10.3164 3.90237 9.68326 4.29289 9.29274C4.68341 8.90221 5.31658 8.90221 5.7071 9.29274L13 16.5856L20.2929 9.29274C20.6834 8.90221 21.3166 8.90221 21.7071 9.29274C22.0976 9.68326 22.0976 10.3164 21.7071 10.707L13 19.4141Z"
+                            fill="#1B1F2B" />
+                    </svg>
                 </div>
             </fieldset>
             <fieldset class="form__item-box">
@@ -152,7 +162,14 @@
             </div>
             <div class="form__item-box checkbox-block">
                 <input class="checkbox" type="checkbox" id="confirm" required>
-                <label class="custom-checkbox" for="confirm"></label>
+                <label class="custom-checkbox" for="confirm">
+                    <svg class="custom-checkbox-img" width="13" height="10" viewBox="0 0 13 10" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.293044 4.53581C0.683569 4.14529 1.31673 4.14529 1.70726 4.53581L4.62161 7.45017L11.1574 0.914353C11.5479 0.523829 12.1811 0.523829 12.5716 0.914353C12.9622 1.30488 12.9622 1.93804 12.5716 2.32857L5.32872 9.57149C4.93819 9.96201 4.30503 9.96201 3.9145 9.57149L0.293044 5.95003C-0.09748 5.5595 -0.09748 4.92634 0.293044 4.53581Z"
+                            fill="#1B1F2B" />
+                    </svg>
+                </label>
                 <label class="checkbox__label" for="confirm">Нажимая кнопку, я принимаю условия <a
                         href="javascript:void(0);">Лицензионного договора</a></label>
             </div>
@@ -222,9 +239,13 @@
                     ${buttonInfo}
                     -------------
             export const buttonInfo =
-                `<a href="javascript:void(0);" class='button-info'>
-                    Подробнее
-                    <img src="../img/arrow-btn.svg" alt="arrow" />
+                <svg alt="Arrow" width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.7004 12.2833L16.1535 5.79682C15.7541 5.40106 15.1063 5.40106 14.7068 5.79682C14.3073 6.19266 14.3073 
+                    6.83433 14.7068 7.23017L19.5074 11.9865H2.02294C1.45803 11.9865 1 12.4403 1 13C1 13.5596 1.45803 14.0135 2.02294 
+                    14.0135H19.5074L14.707 18.7698C14.3075 19.1656 14.3075 19.8073 14.707 20.2032C14.9067 20.4009 15.1686 20.5 15.4304 
+                    20.5C15.6921 20.5 15.9539 20.4009 16.1537 20.2032L22.7004 13.7167C23.0999 13.3208 23.0999 12.6792 22.7004 12.2833Z" 
+                    fill="#fff"/>
+                </svg>    
                 </a>`
         ––––––––––––––––––––––––––––––––––––––
         <div class='social'>
@@ -289,7 +310,7 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20240402125509"></script>
+    <script src="js/app.min.js?_v=20240404133544"></script>
 </body>
 
 </html>
