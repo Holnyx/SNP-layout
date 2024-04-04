@@ -289,10 +289,13 @@
         position: absolute
         left: 50%
         top: 50%
-        width: 18px
-        height: 18px
+        width: 14px
+        height: 14px
         transition: .2s transform ease
         transform: translate(-50%, -50%) scale(0)
+        @include mobile
+            width: 10px
+            height: 10px
 
 .checkbox:checked + .custom-checkbox
     .custom-checkbox-img
